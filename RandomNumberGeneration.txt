@@ -1,0 +1,121 @@
+// C++ program to demonstrate the 
+// use of rand() to get value 
+// in a range of 0 to N-1 
+#include <cstdlib> 
+#include <ctime> 
+#include <iostream>
+
+using namespace std;
+
+int myFunction();
+
+int myFunction (){
+    
+    srand((unsigned)time(0)); 
+    
+    int i;
+    
+    i = (rand()%11); 
+    
+    return i;
+}
+ 
+
+int main ()
+{   
+    int i = myFunction();
+    
+    if ((i > 5) && (i <= 10) ){
+        
+        cout << "test 1" << endl;
+        
+    } else if ((i > 1) && (i <= 5)){
+        
+        cout << "test 2 " << i << endl;
+        
+    } else if (i = 1){
+        
+        cout << "test 3 " << endl;
+        
+    } else if (i = 0) {
+        
+        cout << "test 4 " << endl;
+        
+    } else {
+        
+        cout << "dafault test" << endl;
+        
+    }
+    
+}
+
+
+
+
+// C++ program to generate random numbers 
+#include <cstdlib> 
+#include <iostream> 
+#include <time.h>
+
+using namespace std; 
+  
+int main() 
+{ 
+    // This program will create different sequence of 
+    // random numbers on every program run 
+  
+    // Use current time as seed for random generator 
+    srand(time(0)); 
+  
+    for (int i = 0; i < 4; i++) 
+        cout << (rand() % 11) + 1 << " "; 
+  
+    return 0; 
+}
+
+
+
+
+
+
+// C++ program to demonstrate the 
+// use of rand() to get value 
+// in a range of 0 to N-1 
+#include <cstdlib> 
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    int N = 100; 
+    // This program will create some sequence of random 
+    // numbers on every program run within range 0 to N-1 
+    for (int i = 0; i < 5; i++) 
+        cout << (rand() % N) + 1 << " "; 
+  
+    return 0; 
+} 
+    
+
+
+
+
+
+// C++ program to demonstrate the 
+// use of rand() to get value 
+// in a range of 0 to N-1 
+#include <cstdlib> 
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    int N = 11; 
+    // This program will create some sequence of random 
+    // numbers on every program run within range 0 to N-1 
+    for (int i = 0; i < 5; i++) 
+        cout << (rand() % N) << " "; 
+  
+    return 0; 
+} 
+    
