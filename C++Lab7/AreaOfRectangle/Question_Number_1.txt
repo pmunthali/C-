@@ -1,0 +1,130 @@
+
+
+1. #RECTANGLE_H FILE
+
+
+
+
+// This is the header file for the Rectangle class
+// It contains the declaration of the class
+#pragma once
+
+class Rectangle
+{
+private:
+    float length1; // length of the rectangle
+    float width1;  // width of the rectangle
+
+public:
+    // Default constructor (called when an object is created)
+    Rectangle();
+
+    // Destructor (called when an object is destroyed)
+    ~Rectangle();
+
+    // Set the length of the rectangle
+    void setLength(float length2);
+
+    // Set the width of the rectangle
+    void setWidth(float width2);
+
+    // Get the length of the rectangle
+    float getLength();
+
+    // Get the width of the rectangle
+    float getWidth();
+
+    // Calculate the area of the rectangle
+    float calculateArea();
+};
+
+
+
+
+
+
+2. #RECTANGLE_CPP FILE
+
+
+
+// This is the implementation file for the Rectangle class
+// It contains the definitions of the class methods
+
+#include "Rectangle.h"
+
+// Default constructor
+Rectangle::Rectangle()
+{
+    length1 = 0.0; // initialize length to 0
+    width1 = 0.0;  // initialize width to 0
+}
+
+// Destructor (does nothing for now)
+Rectangle::~Rectangle() {}
+
+// Set the length of the rectangle
+void Rectangle::setLength(float length2)
+{
+    length1 = length2;
+}
+
+// Set the width of the rectangle
+void Rectangle::setWidth(float width2)
+{
+    width1 = width2;
+}
+
+// Get the length of the rectangle
+float Rectangle::getLength()
+{
+    return length1;
+}
+
+// Get the width of the rectangle
+float Rectangle::getWidth()
+{
+    return width1;
+}
+
+// Calculate the area of the rectangle
+float Rectangle::calculateArea()
+{
+    return length1 * width1;
+}
+
+
+
+
+
+
+3. #MAIN_CPP FILE
+
+
+
+// This is the main function file
+// It contains the main function where the program starts
+
+#include <iostream>
+
+#include "Rectangle.h"
+
+using namespace std;
+
+int main()
+{
+    Rectangle AreaOfRectangle; // create a Rectangle object
+
+    float length3, width3;
+
+    cout << "Enter the length of the rectangle: ";
+    cin >> length3;
+    cout << "Enter the width of the rectangle: ";
+    cin >> width3;
+
+    AreaOfRectangle.setLength(length3); // set the length of the rectangle
+    AreaOfRectangle.setWidth(width3);  // set the width of the rectangle
+
+    cout << "Area of the rectangle: " << AreaOfRectangle.calculateArea() << endl;
+
+    return 0;
+}
